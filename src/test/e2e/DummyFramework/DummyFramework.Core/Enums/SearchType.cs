@@ -5,9 +5,6 @@
         Id,
         Name,
         XPath,
-        Tag,
-        Link,
-        CssClass,
         CssSelector
     }
 }
