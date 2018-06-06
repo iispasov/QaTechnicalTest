@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyFramework.Utilities", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyFramework.ExecutionEngine", "DummyFramework.ExecutionEngine\DummyFramework.ExecutionEngine.csproj", "{5AA8554D-C6AE-4BCD-921F-C1241EFE5DFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyFramework.Selenium", "DummyFramework.Selenium\DummyFramework.Selenium.csproj", "{ED839106-E5BA-408C-8365-8ED3370BB8BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5AA8554D-C6AE-4BCD-921F-C1241EFE5DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AA8554D-C6AE-4BCD-921F-C1241EFE5DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AA8554D-C6AE-4BCD-921F-C1241EFE5DFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED839106-E5BA-408C-8365-8ED3370BB8BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED839106-E5BA-408C-8365-8ED3370BB8BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED839106-E5BA-408C-8365-8ED3370BB8BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED839106-E5BA-408C-8365-8ED3370BB8BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
