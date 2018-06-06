@@ -41,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="By.cs" />
+    <Compile Include="Controls\IButton.cs" />
+    <Compile Include="Controls\IContentElement.cs" />
+    <Compile Include="Controls\IElement.cs" />
     <Compile Include="Driver\IDriver.cs" />
     <Compile Include="Driver\IElementFinder.cs" />
     <Compile Include="Driver\IJavaScriptExecutor.cs" />
