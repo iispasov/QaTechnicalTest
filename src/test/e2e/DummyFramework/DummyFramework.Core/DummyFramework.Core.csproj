@@ -40,9 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="By.cs" />
     <Compile Include="Driver\IDriver.cs" />
     <Compile Include="Driver\IElementFinder.cs" />
     <Compile Include="Driver\IJavaScriptExecutor.cs" />
+    <Compile Include="Enums\SearchType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
