@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyFramework.Core", "Dumm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyFramework.TestBase", "DummyFramework.TestBase\DummyFramework.TestBase.csproj", "{EF80967A-AC32-450F-AECA-4DD3BB0BB829}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyFramework.Utilities", "DummyFramework.Utilities\DummyFramework.Utilities.csproj", "{8F4F40CE-0E25-4A64-8EF7-45DCAF485EA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EF80967A-AC32-450F-AECA-4DD3BB0BB829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF80967A-AC32-450F-AECA-4DD3BB0BB829}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF80967A-AC32-450F-AECA-4DD3BB0BB829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F4F40CE-0E25-4A64-8EF7-45DCAF485EA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F4F40CE-0E25-4A64-8EF7-45DCAF485EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F4F40CE-0E25-4A64-8EF7-45DCAF485EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F4F40CE-0E25-4A64-8EF7-45DCAF485EA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
