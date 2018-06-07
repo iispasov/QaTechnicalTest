@@ -24,7 +24,7 @@ namespace DummyFramework.TestBase
             _currentTestExecutionProvider = new TestExecutionProvider();
         }
 
-        protected IDriver Driver => _driver;
+        protected IDriver Driver => _driver ?? (_driver = Container.Resolve<IDriver>());
         protected IUnityContainer Container { get; }
         private static string TestName => TestContext.CurrentContext.Test.Name;
 
