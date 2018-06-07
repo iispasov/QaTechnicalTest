@@ -1,6 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Unity;
+using Unity.Resolution;
 using OpenQA.Selenium;
 using DummyFramework.Core.Controls;
 using DummyFramework.Selenium.Controls;
@@ -10,10 +11,17 @@ namespace DummyFramework.Selenium.TestEngine
 {
     public class ElementFinderService
     {
+        private readonly IUnityContainer _container;
+
+        public ElementFinderService(IUnityContainer container)
+        {
+            _container = container;
+        }
+
         public TElement Find<TElement>(ISearchContext searchContext, By by) where TElement : class, IElement
         {
             var element = searchContext.FindElement(by.ToSeleniumBy());
-            var result = CreateWebElement<TElement>(searchContext, element);
+            var result = ResolveElement<TElement>(searchContext, element);
 
             return result;
         }
@@ -22,7 +30,7 @@ namespace DummyFramework.Selenium.TestEngine
         {
             var elements = searchContext.FindElements(by.ToSeleniumBy());
 
-            return elements.Select(currentElement => CreateWebElement<TElement>(searchContext, currentElement)).ToList();
+            return elements.Select(currentElement => ResolveElement<TElement>(searchContext, currentElement)).ToList();
         }
 
         public bool IsElementPresent(ISearchContext searchContext, By by)
@@ -32,11 +40,15 @@ namespace DummyFramework.Selenium.TestEngine
             return element.IsVisible;
         }
 
-        private static TElement CreateWebElement<TElement>(ISearchContext searchContext, IWebElement webElement) where TElement : class, IElement
+        private TElement ResolveElement<TElement>(ISearchContext searchContext, IWebElement element) where TElement : class, IElement
         {
-            var result = Activator.CreateInstance(typeof(TElement), searchContext, webElement);
+            var result = _container.Resolve<TElement>(new ResolverOverride[]
+            {
+                new ParameterOverride("driver", searchContext),
+                new ParameterOverride("element", element)
+            });
 
-            return (TElement) result;
+            return result;
         }
     }
 }
