@@ -3,7 +3,7 @@
     public interface IDriver : IElementFinderService,
         INavigationService,
         IJavaScriptExecutor,
-        IBrowser
+        IBrowserService
     {
     }
 }

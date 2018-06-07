@@ -1,6 +1,6 @@
 ﻿namespace DummyFramework.Core.Driver
 {
-    public interface IBrowser
+    public interface IBrowserService
     {
         BrowserSettings BrowserSettings { get; }
 
