@@ -40,16 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrowserSettings.cs" />
     <Compile Include="By.cs" />
     <Compile Include="Controls\IButton.cs" />
     <Compile Include="Controls\IContentElement.cs" />
     <Compile Include="Controls\IElement.cs" />
+    <Compile Include="Driver\IBrowserService.cs" />
     <Compile Include="Driver\IDriver.cs" />
     <Compile Include="Driver\IElementFinder.cs" />
     <Compile Include="Driver\IJavaScriptExecutor.cs" />
+    <Compile Include="Driver\INavigationService.cs" />
     <Compile Include="Enums\Browsers.cs" />
     <Compile Include="Enums\SearchType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PageObjectBase.cs" />
+    <Compile Include="WebPageBase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
