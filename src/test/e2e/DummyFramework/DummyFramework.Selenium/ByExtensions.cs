@@ -18,6 +18,10 @@ namespace DummyFramework.Selenium
                 {
                     return By.Name(by.Value);
                 }
+                case SearchType.Tag:
+                {
+                    return By.TagName(by.Value);
+                }
                 case SearchType.CssSelector:
                 {
                     return By.CssSelector(by.Value);

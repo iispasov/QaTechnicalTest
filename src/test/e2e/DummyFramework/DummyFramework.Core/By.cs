@@ -42,6 +42,16 @@ namespace DummyFramework.Core
             return new By(SearchType.Name, name, parentElement);
         }
 
+        public static By Tag(string tag)
+        {
+            return new By(SearchType.Tag, tag);
+        }
+
+        public static By Tag(string tag, IElement parentElement)
+        {
+            return new By(SearchType.Tag, tag, parentElement);
+        }
+
         public static By XPath(string xpath)
         {
             return new By(SearchType.XPath, xpath);

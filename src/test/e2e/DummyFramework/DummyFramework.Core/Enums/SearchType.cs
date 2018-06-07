@@ -4,6 +4,7 @@
     {
         Id,
         Name,
+        Tag,
         XPath,
         CssSelector
     }
