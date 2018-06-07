@@ -45,9 +45,10 @@
     <Compile Include="Controls\IButton.cs" />
     <Compile Include="Controls\IContentElement.cs" />
     <Compile Include="Controls\IElement.cs" />
+    <Compile Include="Controls\IInputSubmit.cs" />
     <Compile Include="Driver\IBrowserService.cs" />
     <Compile Include="Driver\IDriver.cs" />
-    <Compile Include="Driver\IElementFinder.cs" />
+    <Compile Include="Driver\IElementFinderService.cs" />
     <Compile Include="Driver\IJavaScriptExecutor.cs" />
     <Compile Include="Driver\INavigationService.cs" />
     <Compile Include="Enums\Browsers.cs" />
