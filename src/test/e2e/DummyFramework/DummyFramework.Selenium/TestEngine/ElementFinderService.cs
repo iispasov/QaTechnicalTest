@@ -30,7 +30,7 @@ namespace DummyFramework.Selenium.TestEngine
         {
             var elements = searchContext.FindElements(by.ToSeleniumBy());
 
-            return elements.Select(currentElement => ResolveElement<TElement>(searchContext, currentElement)).ToList();
+            return elements.Select(currentElement => ResolveElement<TElement>(searchContext, currentElement));
         }
 
         public bool IsElementPresent(ISearchContext searchContext, By by)
