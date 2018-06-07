@@ -5,6 +5,7 @@ using DummyFramework.Core.Driver;
 using DummyFramework.Selenium.TestEngine;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
+using Unity;
 using By = DummyFramework.Core.By;
 
 namespace DummyFramework.Selenium.Controls
@@ -15,11 +16,11 @@ namespace DummyFramework.Selenium.Controls
         protected IWebElement InternalElement;
         protected ElementFinderService ElementFinderService;
 
-        public Element(IWebDriver driver, IWebElement element)
+        public Element(IWebDriver driver, IWebElement element, IUnityContainer container)
         {
             Driver = driver;
             InternalElement = element;
-            ElementFinderService = new ElementFinderService();
+            ElementFinderService = new ElementFinderService(container);
         }
 
         public bool IsVisible => InternalElement.Displayed;

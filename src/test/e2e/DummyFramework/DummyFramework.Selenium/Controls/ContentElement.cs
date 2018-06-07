@@ -1,12 +1,13 @@
 ﻿using DummyFramework.Core.Controls;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
+using Unity;
 
 namespace DummyFramework.Selenium.Controls
 {
     public class ContentElement : Element, IContentElement
     {
-        public ContentElement(IWebDriver driver, IWebElement element) : base(driver, element)
+        public ContentElement(IWebDriver driver, IWebElement element, IUnityContainer container) : base(driver, element, container)
         {
         }
 

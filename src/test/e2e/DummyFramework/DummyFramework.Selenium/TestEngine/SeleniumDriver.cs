@@ -6,6 +6,7 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Safari;
 using System;
+using Unity;
 
 namespace DummyFramework.Selenium.TestEngine
 {
@@ -14,10 +15,10 @@ namespace DummyFramework.Selenium.TestEngine
         private readonly ElementFinderService _elementFinderService;
         private IWebDriver _driver;
 
-        public SeleniumDriver(BrowserSettings browserSettings)
+        public SeleniumDriver(IUnityContainer container, BrowserSettings browserSettings)
         {
             ResolveBrowser(browserSettings);
-            _elementFinderService = new ElementFinderService();
+            _elementFinderService = new ElementFinderService(container);
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(browserSettings.ElementsWaitTimeout);
         }
 

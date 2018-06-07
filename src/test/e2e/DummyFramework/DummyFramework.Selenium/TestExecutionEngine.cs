@@ -19,7 +19,7 @@ namespace DummyFramework.Selenium
         {
             var browserSettings = new BrowserSettings(browserType);
 
-            Driver = new SeleniumDriver(browserSettings);
+            Driver = new SeleniumDriver(Container, browserSettings);
             RegisterControls();
             RegisterDriver();
         }
