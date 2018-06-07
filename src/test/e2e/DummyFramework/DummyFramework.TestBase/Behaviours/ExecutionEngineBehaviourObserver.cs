@@ -20,7 +20,7 @@ namespace DummyFramework.TestBase.Behaviours
         protected override void PreTestFixtureInit(object sender, TestExecutionEventArgs e)
         {
             ThrowExceptionExecutionEngineNotSet(e.MemberInfo);
-            InitializeDriver(e.MemberInfo);7
+            InitializeDriver(e.MemberInfo);
         }
 
         protected override void PreTestInit(object sender, TestExecutionEventArgs e)
