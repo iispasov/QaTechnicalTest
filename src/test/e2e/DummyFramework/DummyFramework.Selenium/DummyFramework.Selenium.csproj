@@ -79,6 +79,7 @@
     <Compile Include="Controls\Button.cs" />
     <Compile Include="Controls\ContentElement.cs" />
     <Compile Include="Controls\Element.cs" />
+    <Compile Include="Controls\InputSubmit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestEngine\ElementFinderService.cs" />
     <Compile Include="TestEngine\SeleniumDriver.BrowserService.cs" />
