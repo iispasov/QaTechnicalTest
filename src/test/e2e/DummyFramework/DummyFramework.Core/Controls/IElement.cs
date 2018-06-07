@@ -20,6 +20,10 @@ namespace DummyFramework.Core.Controls
 
         void WaitForNotExists();
 
+        void WaitForDisplayed();
+
+        void WaitForNotDisplayed();
+
         void Click();
 
         void MouseClick();
