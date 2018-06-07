@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using DummyFramework.Core;
 using DummyFramework.Core.Controls;
 using DummyFramework.Core.Driver;
 using DummyFramework.Selenium.TestEngine;
@@ -38,16 +38,6 @@ namespace DummyFramework.Selenium.Controls
             return InternalElement.GetAttribute(name);
         }
 
-        public void WaitForExists()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void WaitForNotExists()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Click()
         {
             InternalElement.Click();
@@ -72,6 +62,11 @@ namespace DummyFramework.Selenium.Controls
         public bool IsElementPresent(By by)
         {
             return ElementFinderService.IsElementPresent(InternalElement, by);
+        }
+
+        public void WaitForDisplayed(By by)
+        {
+            ElementFinderService.WaitForDisplayed(Driver, by);
         }
     }
 }

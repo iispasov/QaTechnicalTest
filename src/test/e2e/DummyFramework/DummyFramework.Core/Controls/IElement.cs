@@ -16,14 +16,6 @@ namespace DummyFramework.Core.Controls
 
         string GetAttribute(string name);
 
-        void WaitForExists();
-
-        void WaitForNotExists();
-
-        void WaitForDisplayed();
-
-        void WaitForNotDisplayed();
-
         void Click();
 
         void MouseClick();
