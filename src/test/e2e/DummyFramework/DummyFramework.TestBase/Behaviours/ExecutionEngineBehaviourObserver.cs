@@ -20,17 +20,12 @@ namespace DummyFramework.TestBase.Behaviours
         protected override void PreTestFixtureInit(object sender, TestExecutionEventArgs e)
         {
             ThrowExceptionExecutionEngineNotSet(e.MemberInfo);
-
-            var browser = GetBrowserType(e.MemberInfo);
-
-            InitializeDriver(e.MemberInfo, browser);
+            InitializeDriver(e.MemberInfo);7
         }
 
         protected override void PreTestInit(object sender, TestExecutionEventArgs e)
         {
-            var browser = ConfigureBrowser(e.MemberInfo);
-
-            InitializeDriver(e.MemberInfo, browser);
+            InitializeDriver(e.MemberInfo);
         }
 
         private static void ThrowExceptionExecutionEngineNotSet(MemberInfo memberInfo)
@@ -41,8 +36,14 @@ namespace DummyFramework.TestBase.Behaviours
             }
         }
 
-        private void InitializeDriver(MemberInfo memberInfo, Browsers browser)
+        private void InitializeDriver(MemberInfo memberInfo)
         {
+            var browser = GetBrowserType(memberInfo);
+
+            if (browser == Browsers.NotSet)
+            {
+                return;
+            }
             foreach (var engine in _testExecutionEngines)
             {
                 if (!engine.IsSelected(memberInfo))
@@ -72,7 +73,7 @@ namespace DummyFramework.TestBase.Behaviours
             var methodLevelBrowser = GetBrowserType(memberInfo);
             var classLevelBrowser = GetBrowserType(memberInfo.DeclaringType);
 
-            return methodLevelBrowser != Browsers.NotSet ? methodLevelBrowser : classLevelBrowser;
+            return methodLevelBrowser != Browsers.NotSet && methodLevelBrowser != classLevelBrowser ? methodLevelBrowser : Browsers.NotSet;
         }
     }
 }
