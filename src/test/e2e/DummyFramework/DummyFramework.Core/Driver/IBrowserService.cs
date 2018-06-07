@@ -4,10 +4,6 @@
     {
         BrowserSettings BrowserSettings { get; }
 
-        string SourceString { get; }
-
-        void SwitchToDefault();
-
         void Quit();
 
         void ClickBackButton();
