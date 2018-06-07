@@ -14,6 +14,6 @@
 
         void WaitForUrl(string url);
 
-        void WaitForPrtialUrl(string url);
+        void WaitForPartialUrl(string url);
     }
 }
