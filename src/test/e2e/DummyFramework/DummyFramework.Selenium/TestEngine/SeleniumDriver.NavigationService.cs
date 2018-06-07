@@ -33,10 +33,7 @@ namespace DummyFramework.Selenium.TestEngine
 
         public void WaitForPartialUrl(string url)
         {
-            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(BrowserSettings.ScriptTimeout))
-            {
-                PollingInterval = TimeSpan.FromSeconds(0.8)
-            };
+            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(BrowserSettings.ScriptTimeout));
 
             wait.Until(x => x.Url.Contains(url));
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
@@ -44,10 +41,7 @@ namespace DummyFramework.Selenium.TestEngine
 
         public void WaitForUrl(string url)
         {
-            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(BrowserSettings.ScriptTimeout))
-            {
-                PollingInterval = TimeSpan.FromSeconds(0.8)
-            };
+            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(BrowserSettings.ScriptTimeout));
 
             wait.Until(x => string.Compare(x.Url, url, StringComparison.InvariantCultureIgnoreCase) == 0);
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
