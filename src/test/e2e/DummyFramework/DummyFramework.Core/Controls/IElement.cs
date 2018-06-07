@@ -2,7 +2,7 @@
 
 namespace DummyFramework.Core.Controls
 {
-    public interface IElement : IElementFinder
+    public interface IElement : IElementFinderService
     {
         bool IsVisible { get; }
 

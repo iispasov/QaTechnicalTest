@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DummyFramework.Core.Driver
 {
-    public interface IElementFinder
+    public interface IElementFinderService
     {
         TElement Find<TElement>(By by) where TElement : class, IElement;
 
