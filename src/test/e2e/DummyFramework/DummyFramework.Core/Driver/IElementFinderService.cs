@@ -10,5 +10,7 @@ namespace DummyFramework.Core.Driver
         IEnumerable<TElement> FindAll<TElement>(By by) where TElement : class, IElement;
 
         bool IsElementPresent(By by);
+
+        void WaitForDisplayed(By by);
     }
 }
