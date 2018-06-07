@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Behaviours\ExecutionEngineBehaviourObserver.cs" />
     <Compile Include="IExecutionProvider.cs" />
     <Compile Include="ITestBehaviourObserver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +86,10 @@
     <ProjectReference Include="..\DummyFramework.Core\DummyFramework.Core.csproj">
       <Project>{167770F9-5CAF-4252-A90C-F8FF7AD08FFE}</Project>
       <Name>DummyFramework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DummyFramework.ExecutionEngine\DummyFramework.ExecutionEngine.csproj">
+      <Project>{5AA8554D-C6AE-4BCD-921F-C1241EFE5DFA}</Project>
+      <Name>DummyFramework.ExecutionEngine</Name>
     </ProjectReference>
     <ProjectReference Include="..\DummyFramework.Utilities\DummyFramework.Utilities.csproj">
       <Project>{8F4F40CE-0E25-4A64-8EF7-45DCAF485EA2}</Project>
