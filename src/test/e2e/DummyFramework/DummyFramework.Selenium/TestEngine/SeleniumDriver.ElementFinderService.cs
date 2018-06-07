@@ -1,23 +1,29 @@
-﻿using DummyFramework.Core.Driver;
+﻿using DummyFramework.Core;
+using DummyFramework.Core.Driver;
 using System.Collections.Generic;
 
 namespace DummyFramework.Selenium.TestEngine
 {
     public partial class SeleniumDriver
     {
-        TElement IElementFinderService.Find<TElement>(Core.By by)
+        TElement IElementFinderService.Find<TElement>(By by)
         {
             return _elementFinderService.Find<TElement>(_driver, by);
         }
 
-        IEnumerable<TElement> IElementFinderService.FindAll<TElement>(Core.By by)
+        IEnumerable<TElement> IElementFinderService.FindAll<TElement>(By by)
         {
             return _elementFinderService.FindAll<TElement>(_driver, by);
         }
 
-        public bool IsElementPresent(Core.By by)
+        public bool IsElementPresent(By by)
         {
             return _elementFinderService.IsElementPresent(_driver, by);
+        }
+
+        public void WaitForDisplayed(By by)
+        {
+            _elementFinderService.WaitForDisplayed(_driver, by);
         }
     }
 }

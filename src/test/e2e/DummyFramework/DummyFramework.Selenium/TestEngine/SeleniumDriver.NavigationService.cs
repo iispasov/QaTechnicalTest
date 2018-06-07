@@ -36,7 +36,6 @@ namespace DummyFramework.Selenium.TestEngine
             var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(BrowserSettings.ScriptTimeout));
 
             wait.Until(x => x.Url.Contains(url));
-            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
         }
 
         public void WaitForUrl(string url)
@@ -44,7 +43,6 @@ namespace DummyFramework.Selenium.TestEngine
             var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(BrowserSettings.ScriptTimeout));
 
             wait.Until(x => string.Compare(x.Url, url, StringComparison.InvariantCultureIgnoreCase) == 0);
-            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
         }
     }
 }

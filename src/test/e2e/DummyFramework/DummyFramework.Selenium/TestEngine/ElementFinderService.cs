@@ -6,6 +6,7 @@ using OpenQA.Selenium;
 using DummyFramework.Core.Controls;
 using DummyFramework.Selenium.Controls;
 using By = DummyFramework.Core.By;
+using OpenQA.Selenium.Support.UI;
 
 namespace DummyFramework.Selenium.TestEngine
 {
@@ -38,6 +39,13 @@ namespace DummyFramework.Selenium.TestEngine
             var element = Find<Element>(searchContext, by);
 
             return element.IsVisible;
+        }
+
+        public void WaitForDisplayed(IWebDriver driver, By by)
+        {
+            var wait = new WebDriverWait(driver, driver.Manage().Timeouts().ImplicitWait);
+
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(by.ToSeleniumBy()));
         }
 
         private TElement ResolveElement<TElement>(ISearchContext searchContext, IWebElement element) where TElement : class, IElement
