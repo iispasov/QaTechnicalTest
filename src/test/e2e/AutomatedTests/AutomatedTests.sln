@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatedTests", "Automated
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatedTests.PageObjects", "AutomatedTests.PageObjects\AutomatedTests.PageObjects.csproj", "{04FA05E0-A568-47B0-9180-C14623B0439E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatedTests.Challenges", "AutomatedTests.Challenges\AutomatedTests.Challenges.csproj", "{A5609DC0-DF67-4F70-915B-079B5955BFEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{04FA05E0-A568-47B0-9180-C14623B0439E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04FA05E0-A568-47B0-9180-C14623B0439E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04FA05E0-A568-47B0-9180-C14623B0439E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5609DC0-DF67-4F70-915B-079B5955BFEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5609DC0-DF67-4F70-915B-079B5955BFEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5609DC0-DF67-4F70-915B-079B5955BFEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5609DC0-DF67-4F70-915B-079B5955BFEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
