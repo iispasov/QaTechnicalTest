@@ -44,6 +44,7 @@ export default class CustomTable extends Component {
           multiSelectable={this.state.multiSelectable}
         >
           <TableBody
+		    data-test-id={`table-body-arrays`}
             displayRowCheckbox={this.state.showCheckboxes}
             deselectOnClickaway={this.state.deselectOnClickaway}
             showRowHover={this.state.showRowHover}
