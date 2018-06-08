@@ -1,12 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Unity;
 using Unity.Resolution;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using DummyFramework.Core.Controls;
 using DummyFramework.Selenium.Controls;
 using By = DummyFramework.Core.By;
-using OpenQA.Selenium.Support.UI;
 
 namespace DummyFramework.Selenium.TestEngine
 {
@@ -41,11 +42,28 @@ namespace DummyFramework.Selenium.TestEngine
             return element.IsVisible;
         }
 
-        public void WaitForDisplayed(IWebDriver driver, By by)
+        public void WaitForDisplayed(IWebDriver driver, By by, TimeSpan timeout)
         {
-            var wait = new WebDriverWait(driver, driver.Manage().Timeouts().ImplicitWait);
+            var wait = new WebDriverWait(driver, timeout)
+            {
+                PollingInterval = TimeSpan.FromSeconds(1.0)
+            };
 
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(by.ToSeleniumBy()));
+            wait.Until(x =>
+            {
+                var executor = (IJavaScriptExecutor)x;
+                var element = x.FindElement(by.ToSeleniumBy());
+
+                return (bool) executor.ExecuteScript(
+                    @"var rect = arguments[0].getBoundingClientRect();
+
+                    return (
+                        rect.top >= 0 &&
+                        rect.left >= 0 &&
+                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                    );", element);
+            });
         }
 
         private TElement ResolveElement<TElement>(ISearchContext searchContext, IWebElement element) where TElement : class, IElement

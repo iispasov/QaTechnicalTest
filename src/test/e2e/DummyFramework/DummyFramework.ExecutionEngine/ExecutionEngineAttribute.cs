@@ -1,6 +1,6 @@
-﻿using DummyFramework.Core.Enums;
+﻿using System;
+using DummyFramework.Core.Enums;
 using DummyFramework.ExecutionEngine.Enums;
-using System;
 
 namespace DummyFramework.ExecutionEngine
 {

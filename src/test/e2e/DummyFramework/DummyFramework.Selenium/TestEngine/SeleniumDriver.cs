@@ -1,12 +1,12 @@
-﻿using DummyFramework.Core;
-using DummyFramework.Core.Driver;
+﻿using System;
+using Unity;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Safari;
-using System;
-using Unity;
+using DummyFramework.Core;
+using DummyFramework.Core.Driver;
 
 namespace DummyFramework.Selenium.TestEngine
 {
@@ -17,6 +17,7 @@ namespace DummyFramework.Selenium.TestEngine
 
         public SeleniumDriver(IUnityContainer container, BrowserSettings browserSettings)
         {
+            BrowserSettings = browserSettings;
             ResolveBrowser(browserSettings);
             _elementFinderService = new ElementFinderService(container);
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(browserSettings.ElementsWaitTimeout);

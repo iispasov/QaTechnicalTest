@@ -1,6 +1,7 @@
-﻿using DummyFramework.Core;
-using DummyFramework.Core.Driver;
+﻿using System;
 using System.Collections.Generic;
+using DummyFramework.Core;
+using DummyFramework.Core.Driver;
 
 namespace DummyFramework.Selenium.TestEngine
 {
@@ -23,7 +24,7 @@ namespace DummyFramework.Selenium.TestEngine
 
         public void WaitForDisplayed(By by)
         {
-            _elementFinderService.WaitForDisplayed(_driver, by);
+            _elementFinderService.WaitForDisplayed(_driver, by, TimeSpan.FromSeconds(BrowserSettings.ScriptTimeout));
         }
     }
 }

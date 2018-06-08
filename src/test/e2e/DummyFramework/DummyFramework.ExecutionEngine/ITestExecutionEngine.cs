@@ -1,5 +1,5 @@
-﻿using DummyFramework.Core.Enums;
-using System.Reflection;
+﻿using System.Reflection;
+using DummyFramework.Core.Enums;
 
 namespace DummyFramework.ExecutionEngine
 {

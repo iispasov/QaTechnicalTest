@@ -1,6 +1,6 @@
 ﻿using System;
-using DummyFramework.Core.Enums;
 using OpenQA.Selenium;
+using DummyFramework.Core.Enums;
 
 namespace DummyFramework.Selenium
 {

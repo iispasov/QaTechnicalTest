@@ -1,7 +1,7 @@
-﻿using DummyFramework.Core.Controls;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using Unity;
+using DummyFramework.Core.Controls;
 
 namespace DummyFramework.Selenium.Controls
 {

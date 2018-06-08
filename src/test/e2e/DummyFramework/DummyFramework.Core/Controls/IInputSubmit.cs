@@ -2,5 +2,6 @@
 {
     public interface IInputSubmit : IContentElement
     {
+        void SendKeys(string text);
     }
 }

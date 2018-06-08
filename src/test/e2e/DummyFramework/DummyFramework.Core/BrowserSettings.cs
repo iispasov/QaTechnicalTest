@@ -5,9 +5,12 @@ namespace DummyFramework.Core
 {
     public sealed class BrowserSettings
     {
-        public BrowserSettings(Browsers type)
+        public BrowserSettings(Browsers type, int pageLoadTimeout = 60, int scriptTimeout = 60, int elementsWaitTimeout = 60)
         {
             Type = type;
+            PageLoadTimeout = pageLoadTimeout;
+            ScriptTimeout = scriptTimeout;
+            ElementsWaitTimeout = elementsWaitTimeout;
         }
 
         public static BrowserSettings DefaultChromeSettings => new BrowserSettings(Browsers.Chrome)

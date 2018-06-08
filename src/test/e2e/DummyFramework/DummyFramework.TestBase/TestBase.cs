@@ -1,8 +1,8 @@
-﻿using DummyFramework.Core.Driver;
-using DummyFramework.Utilities;
-using NUnit.Framework;
-using System.Reflection;
+﻿using System.Reflection;
 using Unity;
+using NUnit.Framework;
+using DummyFramework.Core.Driver;
+using DummyFramework.Utilities;
 
 namespace DummyFramework.TestBase
 {

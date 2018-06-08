@@ -1,6 +1,6 @@
-﻿using DummyFramework.Core.Controls;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using Unity;
+using DummyFramework.Core.Controls;
 
 namespace DummyFramework.Selenium.Controls
 {

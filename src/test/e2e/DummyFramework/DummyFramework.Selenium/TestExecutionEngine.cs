@@ -1,11 +1,11 @@
-﻿using DummyFramework.Core;
+﻿using Unity;
+using DummyFramework.Core;
 using DummyFramework.Core.Controls;
 using DummyFramework.Core.Driver;
 using DummyFramework.Core.Enums;
 using DummyFramework.ExecutionEngine;
 using DummyFramework.Selenium.Controls;
 using DummyFramework.Selenium.TestEngine;
-using Unity;
 
 namespace DummyFramework.Selenium
 {
@@ -29,6 +29,7 @@ namespace DummyFramework.Selenium
             Container.RegisterType<IElement, Element>();
             Container.RegisterType<IContentElement, ContentElement>();
             Container.RegisterType<IButton, Button>();
+            Container.RegisterType<IInputSubmit, InputSubmit>();
         }
 
         private void RegisterDriver()

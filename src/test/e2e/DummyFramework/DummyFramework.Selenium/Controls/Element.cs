@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using DummyFramework.Core;
+﻿using System;
+using System.Collections.Generic;
+using Unity;
+using OpenQA.Selenium;
 using DummyFramework.Core.Controls;
 using DummyFramework.Core.Driver;
 using DummyFramework.Selenium.TestEngine;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
-using Unity;
+
 using By = DummyFramework.Core.By;
 
 namespace DummyFramework.Selenium.Controls
@@ -27,10 +27,6 @@ namespace DummyFramework.Selenium.Controls
 
         public bool IsEnabled => InternalElement.Enabled;
 
-        public int Width => InternalElement.Size.Width;
-
-        public string CssClass => InternalElement.GetAttribute("className");
-
         public string Content => InternalElement.Text;
 
         public string GetAttribute(string name)
@@ -41,12 +37,6 @@ namespace DummyFramework.Selenium.Controls
         public void Click()
         {
             InternalElement.Click();
-        }
-
-        public void MouseClick()
-        {
-            var builder = new Actions(Driver);
-            builder.MoveToElement(InternalElement).Click().Build().Perform();
         }
 
         TElement IElementFinderService.Find<TElement>(By by)
@@ -66,7 +56,7 @@ namespace DummyFramework.Selenium.Controls
 
         public void WaitForDisplayed(By by)
         {
-            ElementFinderService.WaitForDisplayed(Driver, by);
+            ElementFinderService.WaitForDisplayed(Driver, by, TimeSpan.FromSeconds(30));
         }
     }
 }

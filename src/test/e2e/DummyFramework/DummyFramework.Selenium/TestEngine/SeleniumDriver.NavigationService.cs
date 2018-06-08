@@ -10,16 +10,6 @@ namespace DummyFramework.Selenium.TestEngine
 
         public string Title => _driver.Title;
 
-        public void Navigate(string relativeUrl, string currentLocation, bool sslEnabled = false)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Navigate(string currentLocation, bool sslEnabled = false)
-        {
-            throw new NotImplementedException();
-        }
-
         public void NavigateByAbsoluteUrl(string absoluteUrl, bool useDecodedUrl = true)
         {
             var url = absoluteUrl;

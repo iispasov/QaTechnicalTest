@@ -1,6 +1,7 @@
-﻿using DummyFramework.Core.Controls;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using Unity;
+using DummyFramework.Core.Controls;
 
 namespace DummyFramework.Selenium.Controls
 {
@@ -8,6 +9,11 @@ namespace DummyFramework.Selenium.Controls
     {
         public InputSubmit(IWebDriver driver, IWebElement element, IUnityContainer container) : base(driver, element, container)
         {
+        }
+
+        public void SendKeys(string text)
+        {
+            new Actions(Driver).MoveToElement(InternalElement).Click().SendKeys(text).Build().Perform();
         }
     }
 }
