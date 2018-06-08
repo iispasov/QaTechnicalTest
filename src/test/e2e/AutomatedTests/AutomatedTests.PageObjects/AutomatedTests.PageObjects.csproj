@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DummyFramework.Core">
+      <HintPath>..\..\DummyFramework\DummyFramework.Core\bin\Debug\DummyFramework.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,7 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChallengeSection\ChallengeSection.Actions.cs" />
+    <Compile Include="ChallengeSection\ChallengeSection.Map.cs" />
+    <Compile Include="ChallengeSection\SubmitForm.Actions.cs" />
+    <Compile Include="ChallengeSection\SubmitForm.Map.cs" />
+    <Compile Include="ChallengeSection\TableArrays.Actions.cs" />
+    <Compile Include="ChallengeSection\TableArrays.Map.cs" />
+    <Compile Include="WelcomePage\WelcomeWebPage.Actions.cs" />
+    <Compile Include="WelcomePage\WelcomeWebPage.Map.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="HomeSection\HomeSection.Actions.cs" />
+    <Compile Include="HomeSection\HomeSection.Map.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
